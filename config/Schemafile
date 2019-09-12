@@ -1,8 +1,8 @@
-create_table "gears", id: :bigint, unsigned: true, force: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+create_table "gears", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
   t.string "title", default: "", null: false
-  t.string "amazonUrl", default: "", null: false
-  t.string "imgUrl", default: "", null: false
+  t.string "amazonUrl", default: ""
+  t.string "imgUrl", default: ""
   t.text "content", null: false
-  t.datetime "created_at",  null: false
-  t.datetime "updated_at",  null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
 end
