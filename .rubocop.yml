@@ -23,7 +23,13 @@ AndOr:
 
 AllCops:
   Exclude:
-    - db/schema.rb
+    - "config.ru"
+    - "bin/**"
+    - "lib/**"
+    - "db/**/*"
+    - "config/**/*"
+    - "script/**/*"
+    - config/Schemafile
     - config/unicorn.rb
     - config/unicorn_staging.rb
     - tmp/**/*

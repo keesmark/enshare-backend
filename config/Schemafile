@@ -5,4 +5,13 @@ create_table "gears", id: :bigint, unsigned: true, force: :cascade, options: "EN
   t.text "content", null: false
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
+  t.bigint "user_id", unsigned: true
+end
+
+create_table "users", id: :bigint, unsigned: true, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4" do |t|
+  t.string "name", default: "", null: false
+  t.string "email", default: "", null: false
+  t.string "password_digest", default: "", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
 end

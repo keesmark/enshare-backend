@@ -19,6 +19,7 @@ module Api::V1
         render json: @gear.errors
       end
     end
+
     def update
       if @gear.update(gear_params)
         render json: @gear
@@ -37,6 +38,7 @@ module Api::V1
     end
 
     private
+
     def gear_params
       params.require(:gear).permit(:title, :amazonUrl, :imgUrl, :content)
     end
